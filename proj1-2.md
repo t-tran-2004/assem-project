@@ -7,19 +7,17 @@ section .text
 
 _start:
 	mov ecx, counter
-	mov eax, start
-	jmp tick
-tick:
-	inc eax
-	loop tick
-
+	call _fun
 	mov eax, 1
 	int 0x80
 
+_fun:
+	inc eax
+	loop _fun
+	ret
 
 section .data
 	counter EQU 20000
-	start EQU 1
 ```
 
 ## Recursion
@@ -29,26 +27,25 @@ section .text
 
 _start:
 	mov ecx, counter
-	mov eax, start
-	jmp tick
-tick:
-	call _rise
-	loop tick
+	call _loop
 	mov eax, 1
 	int 0x80
 
-_rise:
+_loop:
+	call _rec
+	loop _loop
+	ret
+
+_rec:
 	inc eax
 	ret
 
-
 section .data
 	counter EQU 20000
-	start EQU 1
 ```
 
 ## Comparison
-| Method | Execution Time |
-| :-----:| :------------: |
-| Function | ~40 ms |
-| Recursion | ~10 ms |
+| Method | Execution Time (Real, n = 10000) | Execution Time (Real, n = 20000) | Execution Time (Real, n = 40000) |
+| :-----:| :------------------------------: | :------------------------------: | :------------------------------: |
+| Function | ~16 ms | ~11 ms | ~9 ms |
+| Recursion | ~11 ms | ~12 ms | ~10 ms |
