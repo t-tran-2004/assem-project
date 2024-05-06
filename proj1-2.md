@@ -45,7 +45,7 @@ section .data
 ```
 
 ## Comparison
-| Method | Execution Time (Real, n = 10000) | Execution Time (Real, n = 20000) | Execution Time (Real, n = 40000) |
+| Method | Execution Time [n = 20000] | Execution Time [n = 40000] | Execution Time [n = 80000] |
 | :-----:| :------------------------------: | :------------------------------: | :------------------------------: |
-| Function | ~16 ms | ~11 ms | ~9 ms |
-| Recursion | ~11 ms | ~12 ms | ~10 ms |
+| Function | R = 9 ms; U = 5 ms; S = 3 ms | R = 13 ms; U = 6 ms; S = 3 ms | R = 11 ms; U = 6 ms; S = 3 ms |
+| Recursion | R = 11 ms; U = 4 ms; S = 4 ms | R = 9 ms; U = 8 ms; S = 0 ms | R = 9 ms; U = 8 ms; S = 0 ms |
