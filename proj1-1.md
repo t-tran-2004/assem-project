@@ -2,6 +2,14 @@
 
 Create a file based on an original string, invert via XOR operation, and append them into the output file.
 
+[AL Activity 10-1.pdf](https://github.com/t-tran-2004/assem-project/files/15396307/AL.Activity.10-1.pdf)
+
+https://github.com/t-tran-2004/assem-project/assets/162180864/ca832f2e-7749-42ad-9471-a1b04f2bb05b
+
+https://github.com/t-tran-2004/assem-project/assets/162180864/136acd89-8a02-4b86-99ce-83dd850943c3
+
+https://github.com/t-tran-2004/assem-project/assets/162180864/125ba901-542e-497c-bd27-ba678b9ec9b9
+
 ## Code
 ```assembly
 section .text
